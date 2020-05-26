@@ -1,0 +1,7 @@
+const BoxActionTypes = {
+  CHANGE_BOX1_COLOR: "CHANGE_BOX1_COLOR",
+  CHANGE_BOX2_COLOR: "CHANGE_BOX2_COLOR",
+  CHANGE_BOX3_COLOR: "CHANGE_BOX3_COLOR",
+};
+
+export default BoxActionTypes;
