@@ -6,6 +6,8 @@ const boxColorsMap = {
   box3_color: ["green", "blue", "yellow"],
 };
 
+const max_index_of_colors = 2;
+
 // Here, Indices indicate the current index of box  background color in each corresponding "boxColorsMap"
 const initialState = {
   box1_color: boxColorsMap.box1_color[0],
@@ -22,9 +24,11 @@ const boxReducer = (state = initialState, action) => {
       return {
         ...state,
         box1_index_color:
-          state.box1_index_color === 2 ? 0 : state.box1_index_color + 1,
+          state.box1_index_color === max_index_of_colors
+            ? 0
+            : state.box1_index_color + 1,
         box1_color:
-          state.box1_index_color === 2
+          state.box1_index_color === max_index_of_colors
             ? boxColorsMap.box1_color[0]
             : boxColorsMap.box1_color[state.box1_index_color + 1],
       };
@@ -32,9 +36,11 @@ const boxReducer = (state = initialState, action) => {
       return {
         ...state,
         box2_index_color:
-          state.box2_index_color === 2 ? 0 : state.box2_index_color + 1,
+          state.box2_index_color === max_index_of_colors
+            ? 0
+            : state.box2_index_color + 1,
         box2_color:
-          state.box2_index_color === 2
+          state.box2_index_color === max_index_of_colors
             ? boxColorsMap.box2_color[0]
             : boxColorsMap.box2_color[state.box2_index_color + 1],
       };
@@ -42,9 +48,11 @@ const boxReducer = (state = initialState, action) => {
       return {
         ...state,
         box3_index_color:
-          state.box3_index_color === 2 ? 0 : state.box3_index_color + 1,
+          state.box3_index_color === max_index_of_colors
+            ? 0
+            : state.box3_index_color + 1,
         box3_color:
-          state.box3_index_color === 2
+          state.box3_index_color === max_index_of_colors
             ? boxColorsMap.box3_color[0]
             : boxColorsMap.box3_color[state.box3_index_color + 1],
       };
